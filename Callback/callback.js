@@ -74,18 +74,18 @@ console.log(sumArrays(a, b, sum))
 
 //-------------------------------------------4 fija koja zamenjuje nulti i poslednji element niza
 
-function swap (a){
+function swap(a) {
     var tmp;
 
     tmp = a[0];
 
-    if(a.length == 0){
+    if (a.length == 0) {
         return a;
     }
 
-    a[0]=a[a.length-1];
+    a[0] = a[a.length - 1];
 
-    a[a.length-1]=tmp;
+    a[a.length - 1] = tmp;
 
     return a;
 }
@@ -94,9 +94,9 @@ console.log(swap([1, 5, 7, 3]));
 
 //-------------------------------------------5
 
-function nameSurname(name, surname){
+function nameSurname(name, surname) {
 
-    return function(){
+    return function () {
 
         console.log("Suggested email: " + name + "." + surname + "@gmail.com");
 
@@ -113,20 +113,22 @@ console.log((
         var b = "";
         var star = 0;
 
-        for (var i  = 0; i < a.length; i++){
-            if (a[i] == "a"){
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] == "a") {
                 b += "*";
+                star++;
+
             } else {
                 b += a[i];
             }
-            for (var j = 0; j < b.length; j++){
-                if(b[j] == "*"){
-                star ++;
-                }
-            }
+
         }
 
+        console.log(star);
+
+
         return b;
+
     }
 
 )("javascript"))
