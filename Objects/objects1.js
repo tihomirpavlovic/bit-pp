@@ -13,9 +13,13 @@ var breakfast = {
     },
 
     jsCompilant: function () {
+
         if (breakfast.energy > 500) {
+
             return true;
+
         } else {
+            
             return false;
         }
     }
