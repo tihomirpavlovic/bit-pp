@@ -130,29 +130,162 @@ var lessThanGiven = function (arr, a) {
 // //------------------------------------------5b
 
 
-// var substringFinder = function (arr) {
-//     var newarr = [];
+var substringFinder = function (arr) {
+    var newarr = [];
 
-//     for (var i = 0; i < arr.length; i++) {
-//         if (arr[i].toLowerCase().indexOf("pro") == 0) {
-//             newarr.push(arr[i])
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].toLowerCase().indexOf("pro") == 0) {
+            newarr.push(arr[i])
 
-//         }
-//     } return newarr
-// }
+        }
+    } return newarr
+}
 
-// console.log(substringFinder(["profesionalac", "Programer", "decak"]));
+console.log(substringFinder(["profesionalac", "Programer", "decak"]));
 
-//--------------------------5c
+//--------------------------5c    Nije zavrsen jer jos nismo ucili callback zatvorenja
 
-var filterCallBack = function (arr, f()) {
+var filterCallBack = function (arr, f) {
 
-    return f();
+    return f(arr, a);
 
 
 
 }
 
-console.log(filterCallBack([1, 2, 3, 4, 5, 6, 7, 8, 9]), lessThanGiven(6));
+console.log(filterCallBack([1, 2, 3, 4, 5, 6, 7, 8, 9]), lessThanGiven, 6);
 
 
+//---------------------------6a+b
+
+var goods = [
+    { name: "apples", price: 100 },
+    { name: "milk", price: 80 },
+    { name: "bananas", price: 150 }
+]
+
+var totalPrice = function (goods) {
+    var total = 0;
+    for (var i = 0; i < goods.length; i++) {
+        total = total + goods[i].price
+    } return total
+}
+
+console.log(totalPrice(goods));
+
+//-------------------------6c
+
+var goods = [
+    { name: "apples", price: 100 },
+    { name: "milk", price: 80 },
+    { name: "bananas", price: 150 }
+]
+
+var averagePrice = function (goods) {
+    var total = 0;
+    for (var i = 0; i < goods.length; i++) {
+        total = total + goods[i].price / goods.length
+    } return total.toFixed(3)
+}
+
+console.log(averagePrice(goods));
+
+//-----------------------------6d
+
+
+var goods = [
+    { name: "apples", price: 100 },
+    { name: "milk", price: 80 },
+    { name: "bananas", price: 150 }
+]
+
+var averagePrice = function (goods) {
+    var max = goods[0].price;
+    var name = ""
+    for (var i = 0; i < goods.length; i++) {
+        if (goods[i].price > max) {
+            max = goods[i].price
+            name = goods[i].name
+        }
+
+    } return name.toUpperCase();
+}
+console.log(averagePrice(goods));
+
+//---------------------------------7a
+
+var capitalCheck = function (str) {
+    if (str == str.toUpperCase()) {
+        return true;
+    } else {
+        return false
+    }
+}
+console.log(capitalCheck("BEOGRAD"));
+
+//-------------------------------------8
+
+var fromBirthday = function (birthday) {
+    var birth = new Date(birthday);
+    var today = new Date()
+    return ((birth - today) / 86400000).toFixed(0);
+}
+console.log(fromBirthday('March 3, 2018'));
+
+//------------------------------9
+
+var travelTime = function (start, end) {
+    var start = new Date(start);
+    var end = new Date(end);
+    var tempDate = new Date(end-start);
+    console.log(tempDate.getUTCHours(), tempDate.getMinutes(), tempDate.getSeconds());
+    var temp = ((end - start) / 1000).toFixed(0);
+   
+    var hour = parseInt(temp / 3600);
+    var minutes = parseInt((temp - (hour * 3600)) / 60);
+    var second = temp - (minutes * 60) - hour * 3600
+    return (hour + " hours " + minutes + " minutes " + second + " seconds")
+}
+console.log(travelTime('December 17, 1995 03:24:00', "December 17, 1995 15:23:54"));
+
+//--------------------------10
+
+function PointsInSpace(x, y, z) {
+    this.x = x, 
+    this.y = y,
+    this.z = z
+}
+
+var point1 = new PointsInSpace(4, 3, 2);
+var point2 = new PointsInSpace(4, 2, 1);
+
+var distanceBetweenPoints = function (point1, point2){
+    var distance;
+
+    distance = Math.sqrt((point2.x-point1.x)*(point2.x-point1.x)+(point2.y-point1.y)*(point2.y-point1.y)+(point2.z-point1.z)*(point2.z-point1.z))
+
+    return distance;
+}
+
+console.log(distanceBetweenPoints(point1, point2));
+
+//-----------------------10
+
+function PointsInSpace(x, y, z) {
+    this.x = x, 
+    this.y = y,
+    this.z = z
+}
+
+var point1 = new PointsInSpace(4, 3, 2);
+var point2 = new PointsInSpace(4, 2, 1);
+
+var distanceBetweenPoints = function (point1, point2){
+    var distance;
+
+    distance = Math.sqrt(Math.pow((point2.x-point1.x),2)+Math.pow((point2.y-point1.y),2)+Math.pow((point2.z-point1.z),2))
+
+    return distance;
+}
+
+console.log(distanceBetweenPoints(point1, point2));
