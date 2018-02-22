@@ -22,9 +22,9 @@
     }
     var coffeeExpirationDate = new Date(2018, 7, 13);
     var coffee = new Product("Grand Kafa", 102.45, coffeeExpirationDate);
-    var bananas = new Product("Banana", 160.503, coffeeExpirationDate)
-    var milka = new Product("Milka", 60.503, coffeeExpirationDate)
-    var mleko = new Product("Mleko", 560.503, coffeeExpirationDate)
+    var bananas = new Product("Banana", 160.503, coffeeExpirationDate);
+    var milka = new Product("Milka", 60.503, coffeeExpirationDate);
+    var mleko = new Product("Mleko", 560.503, coffeeExpirationDate);
     var bla = coffee.getInfo();
     console.log(bla);
 
@@ -58,8 +58,8 @@
         }
         this.totalPrice = function () {
             var sum = 0;
-            for (var i = 0; i < this.prices.length; i++) {
-                sum += this.prices[i];
+            for (var i = 0; i < this.productList.length; i++) {
+                sum += this.productList[i].price;
             }
             return sum;
         }
@@ -78,7 +78,7 @@
     shop.addProduct(bananas);
     shop.addProduct(milka);
     shop.addProduct(mleko);
-    var visaCard = new PaymentCard(100, true, "1 January 2022");
+    var visaCard = new PaymentCard(10000, true, "1 January 2022");
     console.log(visaCard)
 
     console.log(shop.prices)
