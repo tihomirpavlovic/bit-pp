@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+    <input type="button" value="turn on toogle" onclick="backgroundChange()">
+    <input type="button" value="turn on automatic toogle" onclick="automaticToggle()" id='animationStarter'>
+
+
+    <script type="text/javascript">
+
+        var intervalHandler;
+        var animation = false;
+        function backgroundChange(){
+            var button = document.querySelector("body").classList.toggle("class2");
+        }
+
+
+
+        function automaticToggle(){
+            if(animation == false){
+                intervalHandler = setInterval(backgroundChange, 2000);
+                animation = true;
+                document.getElementById('animationStarter').value = 'turn off automatic toggle';
+            }
+            else{
+                clearInterval(intervalHandler);
+                animation = false;
+                document.getElementById('animationStarter').value = 'turn on automatic toggle';
+                
+            }
+            
+        }
+
+       
+
+        
+    </script>
+
+    <style>
+        body{background-color:white;
+            text-align: center;}
+        .class1{background-color:lime;}
+        .class2{background-color: red;}
+    </style>
+</body>
+</html>

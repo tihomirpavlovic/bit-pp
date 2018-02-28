@@ -1,0 +1,12 @@
+body{
+    background-image: url(field.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+img{
+    width: 10%;
+    position: absolute;
+}

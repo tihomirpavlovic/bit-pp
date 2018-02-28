@@ -1,0 +1,21 @@
+#wrapper{
+    float: left;
+    width:50%;
+    background-color: aqua;
+}
+#textarea{
+    height: 900px;
+}
+
+#form{
+    width: 100%;
+
+}
+
+#msg{
+    margin-left:7px;
+    width:800px;
+}
+#send{
+    width:130px;
+}

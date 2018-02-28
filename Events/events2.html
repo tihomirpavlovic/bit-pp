@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="events2.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="text-wrap">
+            <div id="textarea">
+                <!---ovde mu dodje polje za poslate poruke-->
+
+            </div>
+            <!--end textarea-->
+        </div>
+        <!--end text-wrap-->
+
+
+
+        <div id="form">
+            <form action="">
+                <input type="text" id="msg" col="50">
+                <input type="button" value="Send" id="send">
+            </form>
+        </div>
+        <!--end form-->
+    </div>
+    <!--end wrapper-->
+
+    <script type="text/javascript">
+        function sendMessage() {
+            var msg = document.querySelector('#msg').value;
+            var text = document.createTextNode(msg);
+            var para = document.createElement("p");
+            para.appendChild(text);
+            document.querySelector('#textarea').appendChild(para);
+        }
+
+     var messageInput = document.getElementById("msg").value;
+     messageInput.onkeydown = function(e) {
+         if(e.key == "13"){
+             sendMessage();
+         }
+     }
+
+        document.getElementById("send").onclick = sendMessage;
+
+    </script>
+</body>
+
+</html>
