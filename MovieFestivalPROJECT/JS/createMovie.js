@@ -1,18 +1,4 @@
-function Movie(movieTitle, movieLength, movieGenre) {
-    this.movieTitle = movieTitle;
-    this.movieLength = movieLength;
-    this.movieGenre = movieGenre;
-    this.getData = function () {
-        return this.movieTitle + ", " + this.movieLength + ", " + this.movieGenre;
-    }
-    this.movieLengthSum = function () {
-        var sum = 0;
-        for (var i = 0; i < allMovies.length; i++) {
-            sum += allMovies[i].movieLength;
-        }
-        return sum;
-    }
-}
+
 
 //lista filmova
 var allMovies = [];
@@ -21,8 +7,12 @@ var allMovies = [];
 
 function createMovie(){
 
-    var movieTitle = document.querySelector("#title").value;
-    var movieLength = parseInt(document.querySelector("#length").value);
+    var movieTitleInput = document.querySelector("#title");
+    var movieLengthInput = document.querySelector("#length");
+    var movieGenreInput = document.querySelector("#genre");
+
+    var movieTitle = movieTitleInput.value;
+    var movieLength = parseInt(movieLengthInput.value);
     var movieGenreSelect = document.querySelector("#genre");
     var movieGenreIndex = movieGenreSelect.selectedIndex;
     var movieGenre = movieGenreSelect.options[movieGenreIndex].value;
@@ -62,6 +52,10 @@ function createMovie(){
     //6. azuriramo counter
   
     document.querySelector("#counter").textContent = movie.movieLengthSum();
+
+    movieTitleInput = document.querySelector("#title").value = "";
+    movieLengthInput = document.querySelector("#length").value = "";
+    movieGenreInput = document.querySelector("#genre").value = "";
 
 }
 
