@@ -68,3 +68,21 @@ select{
     padding:10px;
     border:1px solid gray;
 }
+
+#button-CP{
+    margin-top:10px;
+    margin-bottom:30px;
+    background-color: 	#1d56d1;
+    border:none;
+    color:white;
+ 
+}
+
+#button-MtoP{
+    margin-top:10px;
+    margin-bottom:30px;
+    background-color: 	#1d56d1;
+    border:none;
+    color:white;
+ 
+}
