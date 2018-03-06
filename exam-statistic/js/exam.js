@@ -4,11 +4,11 @@ function Exam(subject, student, grade) {
     this.grade = grade;
 }
 
-Exam.prototype.getExamInfo = function () {
+Exam.prototype.getExamInfo = function() {
     return this.student.getStudentData() + " " + this.subject.getSubjectName();
 }
 
-Exam.prototype.hasPassed = function () {
+Exam.prototype.hasPassed = function() {
     if (this.grade > 5) {
         return "PASSED";
     } else {

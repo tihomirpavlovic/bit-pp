@@ -13,17 +13,16 @@
 
     <img id="igr" src="player.png" alt="">
 
-    <input type="button" value="stop">
+    <input type="button" value="stop" id="stop">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        document.querySelector("body").addEventListener("click", function (e){
+        document.querySelector("body").addEventListener("click", function(e) {
             console.log(e);
             document.querySelector("#igr").style.left = e.clientX + "px";
             document.querySelector("#igr").style.top = e.clientY + "px";
 
         });
-
     </script>
 
 

@@ -1,11 +1,9 @@
-
 //var subject
 
-function Subject(name){
-    this.name=name;
-} 
-
-Subject.prototype.getSubjectName = function(){
-    return this.name;
+function Subject(subjectName) {
+    this.subjectName = subjectName;
 }
 
+Subject.prototype.getSubjectName = function() {
+    return this.subjectName;
+}
