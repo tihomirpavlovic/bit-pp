@@ -1,0 +1,32 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  background-color: #FFF; }
+
+.card-deck {
+  margin-top: 5%;
+  width: 100%; }
+
+#headline {
+  text-align: center;
+  margin-top: 5%; }
+
+#movie {
+  margin-bottom: 5%;
+  text-align: center; }
+
+.bg-light {
+  background-color: black !important;
+  color: white; }
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white; }
+  footer p {
+    padding: 10px;
+    margin: 0px; }
+
+/*# sourceMappingURL=bitshow.css.map */

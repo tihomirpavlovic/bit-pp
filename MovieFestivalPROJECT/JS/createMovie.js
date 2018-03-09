@@ -21,7 +21,7 @@ function createMovie(){
 
     var input = document.querySelectorAll("input");
 
-    for (var i = 0; i < input.length; i++) {
+    for (let i = 0; i < input.length; i++) {
         var req = "*required";
         if (input[i].hasAttribute("required") && input[i].value == "") {
             input[i].classList.add("red");
@@ -104,13 +104,13 @@ function addMovieToProgram(){
     var selectedMovie;
     var selectedProgram;
     
-    for (var i = 0; i < allMovies.length; i++) {
+    for (let i = 0; i < allMovies.length; i++) {
         if(allMovies[i].getData() === movieFromList) {
             selectedMovie = allMovies[i];
         }
     }
     
-    for (var i = 0; i < listOfPrograms.length; i++){
+    for (let i = 0; i < listOfPrograms.length; i++){
         if(listOfPrograms[i].getData() === programFromList){
             selectedProgram = listOfPrograms[i];
         }
@@ -123,19 +123,19 @@ function addMovieToProgram(){
     var numOfMovies = selectedProgram.listOfMovies.length;
     var lengthOfProgram = 0;
 
-    for (var i = 0; i < selectedProgram.listOfMovies.length; i++) {
+    for (let i = 0; i < selectedProgram.listOfMovies.length; i++) {
         lengthOfProgram += selectedProgram.listOfMovies[i].movieLength;
     }
 
     var theParagraph;
 
-    for (var i = 0; i < dataIdElements.length; i++) {
+    for (let i = 0; i < dataIdElements.length; i++) {
         if(dataIdElements[i].getAttribute("data-id") === selectedProgramId) {
             theParagraph = dataIdElements[i];
         }
     }
     
-    theParagraph.textContent = .selectedProgram.listOfMovies.length ;
+    theParagraph.textContent = selectedProgram.listOfMovies.length ;
 }
 
 document.querySelector("#button-MtoP").addEventListener("click", addMovieToProgram);
