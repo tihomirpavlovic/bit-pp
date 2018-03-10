@@ -1,40 +1,57 @@
-*{
-margin:0px;
-padding:0px;
-
-}
-body{
-background-color: #FFF;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-.card-deck{
-    margin-top:5%;
-    width:100%;
+body {
+    background-color: rgb(253, 246, 246);
 }
 
-#headline{
+.card-deck {
+    margin-top: 5%;
+    width: 100%;
+}
+
+#headline {
     text-align: center;
     margin-top: 5%;
 }
 
-#movie{
+#movie {
     margin-bottom: 5%;
     text-align: center;
 }
 
-.bg-light{
+.bg-light {
     background-color: black !important;
     color: white;
 }
 
-footer{
+footer {
     text-align: center;
     background-color: black;
     color: white;
-   
-    p{
+    p {
         padding: 10px;
-        margin:0px;
+        margin: 0px;
     }
 }
 
+#headline-info {
+    text-align: center;
+}
+
+#movie-info {
+    overflow: hidden;
+    #img {
+        width: 70%;
+        float: left;
+    }
+    #seasons {
+        float: left;
+    }
+}
+
+#show-details {
+    clear: both;
+}
